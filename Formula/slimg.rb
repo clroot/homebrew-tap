@@ -1,25 +1,25 @@
 class Slimg < Formula
-  desc "Image optimization CLI — convert, optimize, resize"
+  desc "Image optimization CLI — convert, compress, and resize images using MozJPEG, OxiPNG, WebP, AVIF, and QOI"
   homepage "https://github.com/clroot/slimg"
-  version "0.1.3"
+  version "0.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/clroot/slimg/releases/download/v0.1.3/slimg-aarch64-apple-darwin.tar.xz"
-      sha256 "0fb9f39e83036d3cd0b66be344a28db851d26ee3c319fbb333d47cd4556e1c92"
+      url "https://github.com/clroot/slimg/releases/download/v0.2.0/slimg-aarch64-apple-darwin.tar.xz"
+      sha256 "99ff39c8e539dd3e9f4d86b55344e24a58bba25f89ee94e1bacb1aa7ab1da8e3"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/clroot/slimg/releases/download/v0.1.3/slimg-x86_64-apple-darwin.tar.xz"
-      sha256 "d4234f704b5f0012a0b8c1c7adc9ae1a577bc191d0e514260be675613e05f152"
+      url "https://github.com/clroot/slimg/releases/download/v0.2.0/slimg-x86_64-apple-darwin.tar.xz"
+      sha256 "aa7c8a0cc6eb73089202c2703b2c96846b145b2313f825e25c88b70cb1db2376"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/clroot/slimg/releases/download/v0.1.3/slimg-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "2f5c10f46f6135f6d99c20ad6097c4344c5f3637b2c0618bab13e02ce9d58fd6"
+      url "https://github.com/clroot/slimg/releases/download/v0.2.0/slimg-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "88650a4eeb864d7795b7b1c4f215c1d594ffa49cc0d86b77e4ed7ce6b8b60e89"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/clroot/slimg/releases/download/v0.1.3/slimg-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "cf965b28381a24a9fbabca5e06eca71b5ec83d58d7c17337bac899f0c516f36c"
+      url "https://github.com/clroot/slimg/releases/download/v0.2.0/slimg-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "89a67cb13fbbbac03fd097fb01a323dfcca9f7221656111a487ba92331100d69"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
