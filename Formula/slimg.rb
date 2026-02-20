@@ -5,21 +5,21 @@ class Slimg < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/clroot/slimg/releases/download/v0.5.1/slimg-aarch64-apple-darwin.tar.xz"
-      sha256 "c372ce7aa22f144dc145bcdb5cd1a95aa090d72c558ea46b832484ceacf490cb"
+      sha256 "b904c948503778211e412c9df128e0513dfc5e4a13da47edf40f5c846a227071"
     end
     if Hardware::CPU.intel?
       url "https://github.com/clroot/slimg/releases/download/v0.5.1/slimg-x86_64-apple-darwin.tar.xz"
-      sha256 "9a6ae11eaeca74ba1f8cafbd23fadada04c5c18d3560d0deecaa72d023586292"
+      sha256 "15f1653c8b130addffc0082b1405a3e2c61a63bdf6e690ee1d56a507f17fdcf5"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/clroot/slimg/releases/download/v0.5.1/slimg-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "54ed5ea54f307142c119630b8ef369d3ebdbb583c0ca73571d71c74193d85da8"
+      sha256 "05586a7ca96266bca0e5b54920f89762137d1fbebaf3fdf493d41fd3272b1708"
     end
     if Hardware::CPU.intel?
       url "https://github.com/clroot/slimg/releases/download/v0.5.1/slimg-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "5669db532a0a07ffa795851ce7e5e4f31f49314c26080a4805988c6445eed423"
+      sha256 "e2bbe31ad3bfcd74750cb2a58af0b49263983a870ae3b1efece3446307f4a6d2"
     end
   end
   license "MIT"
