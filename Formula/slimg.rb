@@ -1,25 +1,25 @@
 class Slimg < Formula
   desc "Image optimization CLI — convert, compress, and resize images using MozJPEG, OxiPNG, WebP, AVIF, and QOI"
   homepage "https://github.com/clroot/slimg"
-  version "0.6.0"
+  version "0.6.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/clroot/slimg/releases/download/v0.6.0/slimg-aarch64-apple-darwin.tar.xz"
-      sha256 "30b30189acd452d5460e638cb3f9f04e07c74157056ed82d22fed85832875191"
+      url "https://github.com/clroot/slimg/releases/download/v0.6.1/slimg-aarch64-apple-darwin.tar.xz"
+      sha256 "7866e5669eb22ffa54270b7ee7249aa7cbc3f5e287d4399f03b4ed9b586a5c90"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/clroot/slimg/releases/download/v0.6.0/slimg-x86_64-apple-darwin.tar.xz"
-      sha256 "c589863617d0be2213e85e03e836630fb787698974888d982d0b7b9003c8274d"
+      url "https://github.com/clroot/slimg/releases/download/v0.6.1/slimg-x86_64-apple-darwin.tar.xz"
+      sha256 "13d01167647c5d2300216cc96526f61b1fc152a813e13911b9d263ec98837d17"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/clroot/slimg/releases/download/v0.6.0/slimg-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "a5b443bba7559d8b9fd62488bee48be145531699825d88915991361b71ba18d2"
+      url "https://github.com/clroot/slimg/releases/download/v0.6.1/slimg-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "6223aa3a5493ecdb74b819c1cdc88c1cfd5ec22b3c4178bda5f8744b8982d7c0"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/clroot/slimg/releases/download/v0.6.0/slimg-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "59171e8a8cc97c2ca4eb96378b588cd35d478c4ef08158624e39142e56c2b439"
+      url "https://github.com/clroot/slimg/releases/download/v0.6.1/slimg-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "e7684485e2740ce4f980d58c65372f19b59f2546e039ee6530133e9b0372a707"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class Slimg < Formula
   end
 
   def install
-    bin.install "slimg" if OS.mac? && Hardware::CPU.arm?
-    bin.install "slimg" if OS.mac? && Hardware::CPU.intel?
-    bin.install "slimg" if OS.linux? && Hardware::CPU.arm?
-    bin.install "slimg" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "slimg"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "slimg"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "slimg"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "slimg"
+    end
 
     install_binary_aliases!
 
